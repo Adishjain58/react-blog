@@ -63,10 +63,7 @@ updating:false
   }
 
 handleSubmit=async (event)=>{
-  this.setState({
-        
-    updating:true
-  });
+  
   event.preventDefault();
   
 
@@ -79,10 +76,7 @@ category:this.state.category,
 image:this.state.image,
     },this.props.token);
     
-      this.setState({
-        
-        updating:false
-      });
+      
     
     this.props.notyService.success('Article created successfully.');
     this.props.history.push('/')
