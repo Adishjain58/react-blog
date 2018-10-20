@@ -11,20 +11,21 @@ const Articles = ({articles,handlePagination,nextUrl,prevUrl,loading}) => {
            
 
             
-<Banner 
+
+
+ {
+                loading && <div className="text-center"> <img src={loadingGif} alt=""/> </div>
+            }
+            
+{
+                !loading &&
+            
+<div>
+    <Banner 
 backgroundImage="url(assets/img/bg-gift.jpg)"
 title="Latest Blog Posts"
 subTitle="Read and get updated on how we progress."
 />
-<div className="text-center">
- {
-                loading && <img src={loadingGif} alt=""/>
-            }
-            </div>
-{
-                !loading &&
-            
-
             <main className="main-content bg-gray">
                 <div className="row">
                     <div className="col-12 col-lg-6 offset-lg-3">
@@ -56,6 +57,7 @@ subTitle="Read and get updated on how we progress."
                     </div>
                 </div>
             </main>
+    </div>
 }
         </div>
 
