@@ -14,7 +14,7 @@ const Articles = ({articles,handlePagination,nextUrl,prevUrl,loading}) => {
 
 
  {
-                loading && <div className="text-center"> <img src={loadingGif} alt=""/> </div>
+                loading && <div className="text-center mt-200"> <img src={loadingGif} alt=""/> </div>
             }
             
 {
