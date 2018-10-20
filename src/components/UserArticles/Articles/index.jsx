@@ -25,7 +25,7 @@ subTitle="Here are the articles created by you."
                             
                             />
                             <div className="text-center">
-                            <button onClick={()=>editArticle(article)} className="btn btn-info mr-5 mb-5"><i className="fa fa-edit">&nbsp;Edit Article</i></button>
+                            <button onClick={()=>editArticle(article)} className="btn btn-info mr-5 "><i className="fa fa-edit">&nbsp;Edit Article</i></button>
                             <button onClick={()=>deleteArticle(article.id)} className="btn btn-danger"><i className="fa fa-trash">&nbsp;Delete Article</i></button>
                             </div>
                     <hr/>
