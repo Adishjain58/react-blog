@@ -21,6 +21,19 @@ class SingleArticleContainer extends React.Component{
 
   }
   render(){
+    const disqusShortname = 'example';
+    let title,id;
+    if(this.state.article){
+      title=this.state.article.title
+      id=this.state.article.id
+    }else{
+      title="";
+    }
+        const disqusConfig = {
+            url: this.props.match.url,
+            identifier: id,
+            title: title,
+        };
     return(
 <div>
 
@@ -28,6 +41,8 @@ class SingleArticleContainer extends React.Component{
     !this.state.loading &&
     <Article 
 article={this.state.article}
+shortName={disqusShortname}
+disqusConfig={disqusConfig}
 />
   }
   {

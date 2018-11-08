@@ -5,6 +5,7 @@ import draftToHtml from 'draftjs-to-html';
 import { EditorState, convertToRaw,ContentState } from 'draft-js';
 import htmlToDraft from 'html-to-draftjs';
 
+
 class CreateArticle extends React.Component{
   constructor(){
     super();
@@ -69,6 +70,7 @@ handleSubmit=async (event)=>{
 
 
   try{
+    
     await this.props.createArticle({
 title:this.state.title,
 content:draftToHtml(convertToRaw(this.state.content.getCurrentContent())),
@@ -76,7 +78,7 @@ category:this.state.category,
 image:this.state.image,
     },this.props.token);
     
-      
+   
     
     this.props.notyService.success('Article created successfully.');
     this.props.history.push('/')

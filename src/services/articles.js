@@ -53,7 +53,7 @@ return response.data.data;
          
        try{
 
-const rules={
+ const rules={
     title:'required',
     
     content:'required',
@@ -65,7 +65,7 @@ const messages={
 
 };
 
-await validateAll(data,rules,messages);
+await validateAll(data,rules,messages); 
 
         const image=await this.uploadToCloudinary(data.image);
 

@@ -1,10 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import renderHtml from 'react-render-html';
-const SingleArticle=({article})=>{
+import Disqus from 'disqus-react';
+const SingleArticle=({article,shortName,disqusConfig})=>{
 return(
     <div>
-  {/* Header */}
+  {/* Header */
+  console.log(article)
+  }
   <header className="header header-inverse h-fullscreen pb-80" style={{backgroundImage: `url(${article.imageUrl})`}} data-overlay={8}>
     <div className="container text-center">
       <div className="row h-full">
@@ -58,12 +61,19 @@ return(
     <div className="section bt-1 bg-grey">
       <div className="container">
         <div className="row text-center">
-          <div className="text-center p-5">
-            COMMENTS HERE.
+        <div className="text-center p-5 container">
+          
+          {/* <Disqus.CommentCount shortname={shortName} config={disqusConfig}>
+                    
+                </Disqus.CommentCount> */}
+
+                <Disqus.DiscussionEmbed shortname={shortName} config={disqusConfig} />
           </div>
         </div>
       </div>
     </div>
+
+    
   </main>
   {/* END Main container */}
 </div>
