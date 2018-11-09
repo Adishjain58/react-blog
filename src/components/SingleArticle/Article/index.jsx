@@ -6,7 +6,7 @@ const SingleArticle=({article,shortName,disqusConfig})=>{
 return(
     <div>
   {/* Header */
-  console.log(article)
+ 
   }
   <header className="header header-inverse h-fullscreen pb-80" style={{backgroundImage: `url(${article.imageUrl})`}} data-overlay={8}>
     <div className="container text-center">
@@ -61,7 +61,7 @@ return(
     <div className="section bt-1 bg-grey">
       <div className="container">
         <div className="row text-center">
-        <div className="text-center p-5 container">
+        <div style={{minWidth:350}} className="text-center p-5 container">
           
           {/* <Disqus.CommentCount shortname={shortName} config={disqusConfig}>
                     
